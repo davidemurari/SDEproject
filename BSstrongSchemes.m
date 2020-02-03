@@ -25,7 +25,7 @@ W = cumsum(dW);
 xTrue = x0*exp((mu-0.5*sigma^2)*[dt:dt:T]+sigma*W); %Exact sol at time t
 
 X = x0;
-% Euler–Maruyama Method
+% Eulerâ€“Maruyama Method
 for i = 1:M
     w = sum(dW(n*(i-1)+1:n*i));
     X = X + mu*X*num_dt + sigma*X*w;
@@ -64,7 +64,7 @@ figure;
 plot([0:num_dt:T],[x0;valuesEM],'r-o');
 hold on;
 plot([0:dt:T],[x0,xTrue],'g-');
-title('Comparison between exact sol and Euler–Maruyama Method');
+title('Comparison between exact sol and Eulerâ€“Maruyama Method');
 
 figure;
 plot([0:num_dt:T],[x0;valuesM],'r-o');
