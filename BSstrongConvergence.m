@@ -36,7 +36,7 @@ for r = 1:K
         num_dt = dt*n;
         X = x0;
 
-        % Euler–Maruyama Method
+        % Eulerâ€“Maruyama Method
         for i = 1:M
             w = sum(dW(n*(i-1)+1:n*i));
             X = X + mu*X*num_dt + sigma*X*w;
